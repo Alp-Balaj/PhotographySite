@@ -1,0 +1,281 @@
+@media only screen and (min-width: 760px){
+
+    html {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-image: url(landscape-sea-coast-tree-water-forest-1027091-pxhere.com.jpg);
+        background-size: cover;
+        background-position: center;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .name{
+        margin: 10px 0px;
+        font-weight: 100;
+        font-size: 30px;
+        text-decoration: none;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: rgb(238, 106, 89) ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+    .name:hover{
+        color: rgb(249, 172, 103);
+        transition: color 0.5s ease;
+    }
+
+    .login-box {
+        margin-top: 35vh;
+        width: 400px;
+        height: auto; 
+        background: rgba(0, 0, 0, 0.5);
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgb(0, 0, 0, .6);
+        border-radius: 10px;
+        overflow: hidden;
+        backdrop-filter: blur(2px);
+    }
+    .login-box h2 {
+        margin: 10px 0 30px;
+        padding: 10px;
+        font-size: 25px;
+        text-align: center;
+        color: white;
+
+    }
+
+    .login-box .user-box {
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .login-box .user-box input {
+        width: 94%;
+        padding: 10px 0;
+        margin-left: 10px;
+        font-size: 20px;
+        color: white;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        margin-bottom: 10px;
+        border-bottom: 1px solid white;
+    }
+    #email_error, #password_error {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #C62828;
+        background-color: rgba(255, 0, 0, 0.1);
+        padding: 5px; 
+        border-radius: 5px; 
+        border: red solid;
+    }
+    #email_error, #pass_error{
+	margin-left: 10px;
+    margin-top: 5px;
+	width: 360px;
+	font-size: 18px;
+	color: #C62828;
+	background: rgba(255,0,0,0.1);
+	text-align: center;
+	padding: 5px 8px;
+	border-radius: 3px;
+	border: 1px solid #EF9A9A;
+	display:none;
+}   
+    input::placeholder {
+        color: rgba(255, 255, 255, 0.836);
+        font-size: 0.8em;
+    }
+    .ForgotP{
+        font-size: 1em;
+        text-align: left;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    .ForgotP a{
+        text-decoration: none;
+        color:#EE6A59;
+        }
+    .ForgotP a:hover{
+        color: #F9AC67;
+        transition: color 0.3s ease;
+    }
+    .Submit-Button{
+        display: flex;
+        justify-content: center;
+        
+    }
+    .Submit-Button button {
+        margin: 12px 0px;
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: rgb(238, 106, 89) ;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.5s ease;
+        box-shadow: #141e30;
+        border: none;
+    }
+    
+    .Submit-Button button:hover {
+        background-color: rgb(249, 172, 103);
+    }
+    .par p{
+        font-size: 1em;
+        color: lightslategray;
+    }
+    .par{
+        display: flex;
+        justify-content: center;
+    }
+    .register{
+        text-decoration: none;
+        color: lightcyan;
+    }
+    .par a:hover{
+        color: lightblue;
+        transition: color 0.3s ease
+    }
+}
+
+@media only screen and (max-width: 759px){
+
+    html{
+        height: 100%;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-image: url(landscape-sea-coast-tree-water-forest-1027091-pxhere.com.jpg);
+        background-size: cover;
+        background-position: center;
+        background-color: black;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .name{
+        margin: 10px 0px;
+        font-weight: 100;
+        font-size: 30px;
+        text-decoration: none;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: rgb(238, 106, 89) ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+    .name:hover{
+        color: rgb(249, 172, 103);
+        transition: color 0.5s ease;
+    }
+
+    .login-box {
+        margin-top: 120px;
+        width: 350px;
+        height: auto; 
+        background-color: rgba(0, 0, 0, 0.5);
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgb(0, 0, 0, .6);
+        border-radius: 10px;
+    }
+
+    .login-box h2 {
+        margin: 10px 0 30px;
+        padding: 10px;
+        font-size: 25px;
+        text-align: center;
+        color: white;
+
+    }
+
+    .login-box .user-box {
+        position: relative;
+        margin-top: 20px;
+    }
+
+    .login-box .user-box input {
+        width: 94%;
+        padding: 10px 0;
+        margin-left: 10px;
+        font-size: 20px;
+        color: white;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        margin-bottom: 10px;
+        border-bottom: 1px solid white;
+    }
+    #email_error, #pass_error{
+        margin-left: 10px;
+        margin-top: 5px;
+        width: 90%;
+        font-size: 18px;
+        color: #C62828;
+        background: rgba(255,0,0,0.1);
+        text-align: center;
+        padding: 5px 8px;
+        border-radius: 3px;
+        border: 1px solid #EF9A9A;
+        display: none ;
+    }
+
+    input::placeholder {
+        color: rgba(255, 255, 255, 0.836);
+        font-size: 0.8em;
+    }
+
+    .Submit-Button{
+        display: flex;
+        justify-content: center;
+    }
+    .Submit-Button button {
+        margin-left: 10px;
+        margin-top: 20px;
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: rgb(238, 106, 89) ; 
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.5s ease;
+        box-shadow: #141e30;
+    }
+    
+    .Submit-Button button:hover {
+        background-color: rgb(249, 172, 103);
+    }
+    .par p{
+        font-size: 1em;
+        color: lightslategray;
+    }
+    .par{
+        margin-left: 30px;
+    }
+    .register{
+        text-decoration: none;
+        color: lightcyan;
+    }
+}
