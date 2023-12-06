@@ -1,0 +1,78 @@
+
+.Name{
+    margin-left: 0px;
+    font-weight: 100;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 150%;
+    color: rgb(249, 172, 103);
+}
+.Name:hover{
+    color: rgb(238, 106, 89) ; 
+    transition: color 0.5s ease;
+}
+.AwLinkwhenclicked{
+    color: #ee6a59;
+    text-decoration: none;
+}
+.AwLinkwhenclicked:hover{
+    color: #f9ac67;
+    transition: color 0.5s ease;
+}
+.title{
+    color: #f9ac67;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.title:hover{
+    color: #ee6a59;
+    transition: color ease 0.5s;
+}
+.paragraph{
+    margin: 0px 25px;
+}
+.TheCollage{
+    display: flex;
+    justify-content: center;
+    margin-top: 75px;
+}
+.Collage{
+    width: 1000px;
+}
+
+#Collage-img-1{
+    width: 250px;
+    height: 250px;
+}
+#Collage-img-2{
+    width: 350px;
+     height: 250px;   
+}
+#Collage-img-3{
+    width: 275px;
+    height: 250px;   
+}
+#Collage-img-4{
+    width: 275px;
+    height: 250px;       
+}
+#Collage-img-5{
+    width: 350px;
+    height: 250px;        
+}
+#Collage-img-6{
+    width: 250px;
+    height: 250px;      
+}
+#Collage-img-7{
+    width: 250px;
+    height: 250px;      
+}
+#Collage-img-8{
+    width: 200px;
+    height: 250px;    
+}
+#Collage-img-9{
+    width: 425px;
+    height: 250px;
+}
