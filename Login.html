@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head> 
-    <title>Login-Aspire</title>
+    <title>Login Page</title>
     <link rel="stylesheet" href="login.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>    
+<body> 
     <div class="login-box">
         <a href="ProjektiHTML.html" class="name">ASPIRE</a>
-        <form>
-            <div class="user-box"><input type="email" name="" placeholder="Email or Username" id="">
-            
-            </div>
-            <div class="user-box"><input type="password" name="" placeholder="Password" id="">
-            </div>
-            <div class="Submit-Button"><a href="#">Log-in</a></div>
+        <form action="ProjektiHTML.html" method="post" name="form" onsubmit="return validated()">
+            <div class="user-box"><input type="email" name="email" placeholder="Email or Username" id="email"></div>
+            <div id="email_error">Please fill in your email</div>
+            <div class="user-box"><input type="password" name="password" placeholder="Password" id="password"></div>
+            <div id="pass_error">Please fill in your password</div>
+            <div class="ForgotP"><a href="">Forgot your password?</a></div>
+            <div class="Submit-Button"><button type="submit">Log-in</button></div>
             <div class="par"><p>Dont have an account? <a href="Register.html" class="register">Register</a> with us</p></div>
-        
         </form>
     </div>
-    
-      
+    <script src="valid.js"></script>
 </body>
 </html> 
