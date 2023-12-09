@@ -278,4 +278,13 @@
         text-decoration: none;
         color: lightcyan;
     }
+    .ForgotP a{
+        margin-left: 10px;
+        text-decoration: none;
+        color:#EE6A59;
+    }
+    .ForgotP a:hover{
+        color: #F9AC67;
+        transition: color 0.3s ease;
+    }
 }
