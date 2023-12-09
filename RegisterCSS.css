@@ -75,7 +75,7 @@
     #emri_error,#email_error,#password_error,#ConfirmPassword_error{
             margin-left: 10px;
             margin-top: 5px;
-            width: 360px;
+            width: 90%;
             font-size: 18px;
             color: #C62828;
             background: rgba(255,0,0,0.1);
@@ -135,7 +135,6 @@
         background-size: cover;
         background-position: center;
         background-color: black;
-
         display: flex;
         justify-content: center;
 
@@ -196,10 +195,18 @@
         border-bottom: 1px solid white;
 
     }
-    #emri_error,#email_error,#pass_error{
-        margin-top: 20px;
+    #emri_error,#email_error,#password_error,#ConfirmPassword_error{
         margin-left: 10px;
-        color: red;
+        margin-top: 5px;
+        width: 90%;
+        font-size: 18px;
+        color: #C62828;
+        background: rgba(255,0,0,0.1);
+        text-align: center;
+        padding: 5px 8px;
+        border-radius: 3px;
+        border: 1px solid #EF9A9A;
+        display: none ;
     }
 
     input::placeholder {
@@ -209,17 +216,19 @@
     .Submit-Button{
         display: flex;
         justify-content: center;
+        
     }
-    .Submit-Button button {
-        margin-top: 20px;
+    .Submit-Button button{
+        margin: 12px 0px;
         display: inline-block;
         padding: 10px 20px;
         background-color: rgb(238, 106, 89) ; 
         color: white;
         text-decoration: none;
         border-radius: 5px;
-        transition: background-color 0.3s ease;
+        transition: background-color 0.5s ease;
         box-shadow: #141e30;
+        border: none;
     }
     
     .Submit-Button button:hover {
