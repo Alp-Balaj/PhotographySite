@@ -256,8 +256,14 @@
     
     
     .navLink{
-        color:  white;
+        color:  rgb(249, 172, 103);
         text-decoration: none;
+    }
+    .navLink:hover {
+        color: #ee6a59 ; 
+        transition: color 0.5s ease;
+        text-decoration:none; 
+        cursor:pointer;  
     }
     
     .TopNav{
@@ -274,8 +280,14 @@
     }
     
     .LoginLink{
-        color:  white;
+        color:  rgb(249, 172, 103);
         text-decoration: none;
+    }
+    .LoginLink:hover {
+        color: rgb(238, 106, 89) ;
+        transition: color 0.5s ease; 
+        text-decoration:none; 
+        cursor:pointer;
     }
     
     .secondDiv{
