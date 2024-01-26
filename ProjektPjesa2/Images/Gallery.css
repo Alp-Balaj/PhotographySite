@@ -1,0 +1,215 @@
+@media only screen and (min-width: 768px) {   
+    html{
+        height: 100%;
+    }
+    body{
+        height: 100%;
+    } 
+    .Name{
+        margin-left: 0px;
+        font-weight: 100;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 150%;
+        color: rgb(249, 172, 103);
+    }
+    .Name:hover{
+        color: rgb(238, 106, 89) ; 
+        transition: color 0.5s ease;
+    }
+    .GalLinkwhenclicked{
+        color: #ee6a59;
+        text-decoration: none;
+    }
+    .GalLinkwhenclicked:hover{
+        color: rgb(249, 172, 103);
+        transition: color 0.5s ease;
+    }
+    .Square1{
+        width: 550px;
+    }
+    .Square2{
+        width: 550px;
+    }
+    .firstGallery{
+        width: 100%;
+        height: 1000px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 12%;
+    }
+    .firstGallery p{
+        margin: 0px 25px;
+        font-size: 20px;
+    }
+    .Landscapes1{
+        background-color: rgb(59, 69, 141);
+        border-radius: 10%;
+        display: flex;
+        align-items: center;
+    }
+    .Landscapes2{
+        background-color: rgb(59, 69, 141);
+        border-radius: 10%;
+        display: flex;
+        align-items: center;
+    }
+    .LSimg-1{
+        border-radius: 15%;
+        margin-left: 120%;
+        width: 375px;
+        height: 225px;
+    }
+    .LSimg-2{
+        border-radius: 15%;
+        margin-left: 20%;
+        width: 375px;
+        height: 225px;
+    }
+    .LSimg-3{
+        border-radius: 15%;
+        margin-left: 120%;
+        width: 375px;
+        height: 225px;
+    }
+    .LSimg-4{
+        border-radius: 15%;
+        margin-right: 120%;
+        width: 375px;
+        height: 225px;
+    }
+    .LSimg-5{
+        border-radius: 15%;
+        margin-right: 20%;
+        width: 375px;
+        height: 225px;
+    }
+    .LSimg-6{
+        border-radius: 15%;
+        margin-right: 120%;
+        width: 375px;
+        height: 225px;
+    }
+    .MiniTitulli{
+        margin-left: 25px;
+        font-size: 100px;
+        margin-bottom: 0px;
+        color: rgb(249, 172, 103);
+        margin-top: 0px;
+    }
+    .MiniTitulli:hover{
+        color: #ee6a59;
+        transition: color ease 0.5s;
+    }
+    /* .divarrows{
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        width: 99%;
+    } */
+    /* .arrows {
+        background-color: rgba(0, 0, 0, 0.014) ;
+        border: none;
+        color: white;
+        padding: 20px;
+        width: 55px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 50%;
+    }
+    .arrows:hover{
+        background-color: rgba(0, 0, 0, 0.329) ;
+    } */
+}
+@media only screen and (max-width: 767px) {
+    .TopNav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgba(0,0,0,0.5) ;
+        backdrop-filter: blur(5px);
+        color: white;
+        width: 100vw;
+        height: 70px;
+        font-size: 55%;
+    }
+    .Name{
+        margin-left: 0px;
+        font-weight: 100;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 150%;
+        color: rgb(249, 172, 103);
+    }
+    .Name:hover{
+        color: rgb(238, 106, 89) ; 
+        transition: color 0.5s ease;
+    }
+    .GalLinkwhenclicked{
+        color: #ee6a59;
+        text-decoration: none;
+    }
+    .GalLinkwhenclicked:hover{
+        color: rgb(249, 172, 103);
+        transition: color 0.5s ease;
+    }
+    .firstGallery{
+        height: 250px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 10px;
+    }
+    .firstGallery p{
+        margin: 0px 25px;
+        font-size: 20px;
+    }
+    .LSimg{
+        margin: 0px 5px;
+        width: auto;
+        height: 250px;
+    }
+    .Landscapes{
+        display: flex;
+        justify-content: center;
+    }
+    .LSimg{
+        width: 300px;
+        height: 200px;
+    }
+    .MiniTitull{
+        font-size: 20px;
+        margin-left: 15px;
+        margin-bottom: 0px;
+        margin-top: 50px;
+        color: rgb(249, 172, 103);
+    }
+    .MiniTitull:hover{
+        color: #ee6a59;
+        transition: color ease 0.5s;
+    }
+    .divarrows{
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        width: 99%;
+    }
+    .arrows {
+        background-color: rgba(0, 0, 0, 0.014) ;
+        border: none;
+        color: white;
+        padding: 20px;
+        width: 55px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 50%;
+    }
+    .arrows:hover{
+        background-color: rgba(0, 0, 0, 0.329) ;
+    }
+}

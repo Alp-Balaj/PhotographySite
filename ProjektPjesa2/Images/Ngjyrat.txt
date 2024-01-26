@@ -1,0 +1,4 @@
+EE6A59 (Orange to Red)	-> rgb(238, 106, 89)
+3A3F58 (Dark blue-ish) 	-> rgb(58, 63, 88)
+F9AC67 (Golden)		-> rgb(249, 172, 103)
+ECE6CD (Creamy white)	-> rgb(236, 230, 205)
