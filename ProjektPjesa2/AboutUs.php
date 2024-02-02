@@ -9,28 +9,30 @@
     <link rel="stylesheet" href="./Style.css">
 </head>
 <body>
-    <div class="TopNav">
-        <div class="firstDiv">
-            <a class="navLink" href="index.php"><div class="Name">ASPIRE</div></a>
-            <div class="link">
-                <a class="navLink" href="./Gallery.php">Gallery</a>
+<div class="TopNav">
+    <div class="firstDiv">
+        <a class="navLink" href="index.php"><div class="Name">ASPIRE</div></a>
+        <div class="link">
+            <a class="navLink" href="./Gallery.php">Gallery</a>
+        </div>
+        <div class="link">
+            <a class="navLink" href="./Awards.php">2023 Awards</a>
+        </div>
+        <div class="link">
+            <a class="navLink" href="./AboutUs.php">About Us</a>
+        </div>
+        <div class="link">
+            <a class="navLink" href="./ContactUs.php">Contact Us</a>
+        </div>
+        <?php if ($logged): ?>
+            <!-- Display user's name when logged in -->
+            <div style=" margin-left: 15px;" class="Name">
+                <?php echo $emri; ?>
             </div>
-            <div class="link">
-                <a class="navLink" href="./Awards.php">2023 Awards</a>
-            </div>
-            <div class="link">
-                <a class="navLink" href="./AboutUs.php">About Us</a>
-            </div>
-            <div class="link">
-                <a class="navLink" href="./ContactUs.php">Contact Us</a>
-            </div>
-            <?php if ($logged): ?>
-                <!-- Display user's name when logged in -->
-                <div style=" margin-left: 15px;" class="Name">
-                    <?php echo $emri; ?>
-                </div>
-            <?php endif; ?>
-        </div> 
+        <?php endif; ?>
+        <button class="dashboardBT"><a href="./dashboard.php">~</a></button>
+    </div>
+            
         <div class="secondDiv">
             <?php if (!$logged): ?>
                 <div class="Login">
@@ -46,19 +48,20 @@
             <?php endif; ?>
         </div>
     </div>
-    <div class="PTopNav">
-        <div class="unlink">
-            <div class="plink">
-                <a class="navLink" href="./Gallery.php">Gallery</a>
-            </div>
-            <div class="plink">
-                <a class="navLink" href="./Awards.php">2023 Awards</a>
-            </div>
-            <div class="plink">
-                <a class="navLink" href="./AboutUs.php">About Us</a>
-            </div>
-            <div class="plink">
-                <a class="navLink" href="./ContactUs.php">Contact Us</a>
+        <div class="PTopNav">
+            <div class="unlink">
+                <div class="plink">
+                    <a class="navLink" href="./Gallery.php">Gallery</a>
+                </div>
+                <div class="plink">
+                    <a class="navLink" href="./Awards.php">2023 Awards</a>
+                </div>
+                <div class="plink">
+                    <a class="navLink" href="./AboutUs.php">About Us</a>
+                </div>
+                <div class="plink">
+                    <a class="navLink" href="./ContactUs.php">Contact Us</a>
+                </div>
             </div>
         </div>
     </div>

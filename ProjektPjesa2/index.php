@@ -31,6 +31,9 @@
                     <div style=" margin-left: 15px;" class="Name">
                         <?php echo $emri; ?>
                     </div>
+                    <?php if ($isAdmin):?>
+                    <button class="dashboardBT"><a href="./dashboard.php">~</a></button>
+                    <?php endif; ?>
                 <?php endif; ?>
             </div>
             

@@ -9,59 +9,61 @@
     <link rel="stylesheet" href="./Style.css">
 </head>
 <body>
-    <div class="TopNav">
-        <div class="firstDiv">
-            <a class="navLink" href="index.php"><div class="Name">ASPIRE</div></a>
-            <div class="link">
-                <a class="navLink" href="./Gallery.php">Gallery</a>
-            </div>
-            <div class="link">
-                <a class="navLink" href="./Awards.php">2023 Awards</a>
-            </div>
-            <div class="link">
-                <a class="navLink" href="./AboutUs.php">About Us</a>
-            </div>
-            <div class="link">
-                <a class="navLink" href="./ContactUs.php">Contact Us</a>
-            </div>
-            <?php if ($logged): ?>
-                <!-- Display user's name when logged in -->
-                <div style=" margin-left: 15px;" class="Name">
-                    <?php echo $emri; ?>
+<div class="TopNav">
+            <div class="firstDiv">
+                <a class="navLink" href="index.php"><div class="Name">ASPIRE</div></a>
+                <div class="link">
+                    <a class="navLink" href="./Gallery.php">Gallery</a>
                 </div>
-            <?php endif; ?>
-        </div>
-        <div class="secondDiv">
-            <?php if (!$logged): ?>
-                <div class="Login">
-                    <a class="LoginLink" href="Login.php">Log-in</a>
+                <div class="link">
+                    <a class="navLink" href="./Awards.php">2023 Awards</a>
                 </div>
-                <div class="Signup">
-                <a class="SignupButton" href="Register.php">Sign-up</a>
+                <div class="link">
+                    <a class="navLink" href="./AboutUs.php">About Us</a>
                 </div>
-            <?php else: ?>
-                <div style="margin-right: 20px;" class="Signup">
-                    <a class="SignupButton" href="Logout.php">Log-out</a>
+                <div class="link">
+                    <a class="navLink" href="./ContactUs.php">Contact Us</a>
                 </div>
-            <?php endif; ?>
-        </div>
-    </div>
-    <div class="PTopNav">
-        <div class="unlink">
-            <div class="plink">
-                <a class="navLink" href="./Gallery.php">Gallery</a>
+                <?php if ($logged): ?>
+                    <!-- Display user's name when logged in -->
+                    <div style=" margin-left: 15px;" class="Name">
+                        <?php echo $emri; ?>
+                    </div>
+                <?php endif; ?>
+                <button class="dashboardBT"><a href="./dashboard.php">~</a></button>
             </div>
-            <div class="plink">
-                <a class="navLink" href="./Awards.php">2023 Awards</a>
-            </div>
-            <div class="plink">
-                <a class="navLink" href="./AboutUs.php">About Us</a>
-            </div>
-            <div class="plink">
-                <a class="navLink" href="./ContactUs.php">Contact Us</a>
+            
+            <div class="secondDiv">
+                <?php if (!$logged): ?>
+                    <div class="Login">
+                        <a class="LoginLink" href="Login.php">Log-in</a>
+                    </div>
+                    <div class="Signup">
+                    <a class="SignupButton" href="Register.php">Sign-up</a>
+                    </div>
+                <?php else: ?>
+                    <div style="margin-right: 20px;" class="Signup">
+                        <a class="SignupButton" href="Logout.php">Log-out</a>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
-    </div>
+        <div class="PTopNav">
+            <div class="unlink">
+                <div class="plink">
+                    <a class="navLink" href="./Gallery.php">Gallery</a>
+                </div>
+                <div class="plink">
+                    <a class="navLink" href="./Awards.php">2023 Awards</a>
+                </div>
+                <div class="plink">
+                    <a class="navLink" href="./AboutUs.php">About Us</a>
+                </div>
+                <div class="plink">
+                    <a class="navLink" href="./ContactUs.php">Contact Us</a>
+                </div>
+            </div>
+        </div>
     <div>
         <div class="containerA">
             <h1 class="title">Our awards for the 2023 competition</h1>
@@ -116,38 +118,38 @@
     <div class="TheCollage">
         <div class="Collage">
             <div>
-                <img class="Collage-img" id="Collage-img-1" src="./Images/urban_photo_awards_2021_09.jpg" alt="">
+                <img class="Collage-img" id="Collage-img-1" src="./Images/spider.jpg" alt="">
             </div>
             <div>
-                <img class="Collage-img" id="Collage-img-2" src="./Images/urban_photo_awards_2021_01.jpg" alt="">
+                <img class="Collage-img" id="Collage-img-2" src="./Images/bird.jpg" alt="">
 
             </div>
             <div>
-                <img class="Collage-img" id="Collage-img-3" src="./Images/93-UNDERWATER-GABRIEL-BARATHIEU-FLUOMORAY.jpg" alt="">
+                <img class="Collage-img" id="Collage-img-3" src="./Images/cat.jpg" alt="">
 
             </div>
             <div>
-                <img class="Collage-img" id="Collage-img-4" src="./Images/M8dTGPaGjmQgUwoYULxbnd-970-80.jpg.webp" alt="">
+                <img class="Collage-img" id="Collage-img-4" src="./Images/hangzhou.jpg" alt="">
 
             </div>
             <div>
-                <img class="Collage-img" id="Collage-img-5" src="./Images/urban_photo_awards_2021_02.jpg" alt="">
+                <img class="Collage-img" id="Collage-img-5" src="./Images/enrique.jpg" alt="">
 
             </div>
             <div>
-                <img class="Collage-img" id="Collage-img-6" src="./Images/©-Juan-+Ahumada-The-Footprint-Friend-CUPOTY-1000px.jpg" alt="">
+                <img class="Collage-img" id="Collage-img-6" src="./Images/surfboard.jpg" alt="">
 
             </div>
             <div>
-                <img class="Collage-img" id="Collage-img-7" src="./Images/urban_photo_awards_2021_21-768x1152.jpg" alt="">
+                <img class="Collage-img" id="Collage-img-7" src="./Images/sky.jpg" alt="">
 
             </div>
             <div>
-                <img class="Collage-img" id="Collage-img-8" src="./Images/©-Alex-Pansier-Angry-Bird-CUPOTY.jpg" alt="">
+                <img class="Collage-img" id="Collage-img-8" src="./Images/boy.jpg" alt="">
 
             </div>
             <div>
-                <img class="Collage-img" id="Collage-img-9" src="./Images/urban_photo_awards_2021_14-768x548.jpg" alt="">
+                <img class="Collage-img" id="Collage-img-9" src="./Images/alps.jpg" alt="">
 
             </div>
         </div>
@@ -161,38 +163,38 @@
     <div class="TheCollage">
         <div class="Collage">
             <div>
-                <img class="Collage-img" id="Collage-img-1" src="./Images/urban_photo_awards_2021_09.jpg" alt="">
+                <img class="Collage-img" id="Collage-img-1" src="./Images/food.jpg" alt="">
             </div>
             <div>
-                <img class="Collage-img" id="Collage-img-2" src="./Images/urban_photo_awards_2021_01.jpg" alt="">
+                <img class="Collage-img" id="Collage-img-2" src="./Images/street.jpg" alt="">
 
             </div>
             <div>
-                <img class="Collage-img" id="Collage-img-3" src="./Images/93-UNDERWATER-GABRIEL-BARATHIEU-FLUOMORAY.jpg" alt="">
+                <img class="Collage-img" id="Collage-img-3" src="./Images/pufferfish.jpg" alt="">
 
             </div>
             <div>
-                <img class="Collage-img" id="Collage-img-4" src="./Images/M8dTGPaGjmQgUwoYULxbnd-970-80.jpg.webp" alt="">
+                <img class="Collage-img" id="Collage-img-4" src="./Images/steel-wool.jpg" alt="">
 
             </div>
             <div>
-                <img class="Collage-img" id="Collage-img-5" src="./Images/urban_photo_awards_2021_02.jpg" alt="">
+                <img class="Collage-img" id="Collage-img-5" src="./Images/fireworks.jpg" alt="">
 
             </div>
             <div>
-                <img class="Collage-img" id="Collage-img-6" src="./Images/©-Juan-+Ahumada-The-Footprint-Friend-CUPOTY-1000px.jpg" alt="">
+                <img class="Collage-img" id="Collage-img-6" src="./Images/woman.jpg" alt="">
 
             </div>
             <div>
-                <img class="Collage-img" id="Collage-img-7" src="./Images/urban_photo_awards_2021_21-768x1152.jpg" alt="">
+                <img class="Collage-img" id="Collage-img-7" src="./Images/tulip.jpg" alt="">
 
             </div>
             <div>
-                <img class="Collage-img" id="Collage-img-8" src="./Images/©-Alex-Pansier-Angry-Bird-CUPOTY.jpg" alt="">
+                <img class="Collage-img" id="Collage-img-8" src="./Images/wren.jpg" alt="">
 
             </div>
             <div>
-                <img class="Collage-img" id="Collage-img-9" src="./Images/urban_photo_awards_2021_14-768x548.jpg" alt="">
+                <img class="Collage-img" id="Collage-img-9" src="./Images/sunset.jpg" alt="">
 
             </div>
         </div>

@@ -12,42 +12,44 @@
     <link rel="stylesheet" href="./Style.css">
 </head>
 <body>
-    <div class="TopNav">
-        <div class="firstDiv">
-            <a class="navLink" href="index.php"><div class="Name">ASPIRE</div></a>
-            <div class="link">
-                <a class="navLink" href="./Gallery.php">Gallery</a>
-            </div>
-            <div class="link">
-                <a class="navLink" href="./Awards.php">2023 Awards</a>
-            </div>
-            <div class="link">
-                <a class="navLink" href="./AboutUs.php">About Us</a>
-            </div>
-            <div class="link">
-                <a class="navLink" href="./ContactUs.php">Contact Us</a>
-            </div>
-            <?php if ($logged): ?>
-                <!-- display users name when logged in -->
-                <div style=" margin-left: 15px;" class="Name">
-                    <?php echo $emri; ?>
-                </div>
-            <?php endif; ?>
+<div class="TopNav">
+    <div class="firstDiv">
+        <a class="navLink" href="index.php"><div class="Name">ASPIRE</div></a>
+        <div class="link">
+            <a class="navLink" href="./Gallery.php">Gallery</a>
         </div>
-        <div class="secondDiv">
-            <?php if (!$logged): ?>
-                <div class="Login">
-                    <a class="LoginLink" href="Login.php">Log-in</a>
-                </div>
-                <div class="Signup">
-                <a class="SignupButton" href="Register.php">Sign-up</a>
-                </div>
-            <?php else: ?>
-                <div style="margin-right: 20px;" class="Signup">
-                    <a class="SignupButton" href="Logout.php">Log-out</a>
-                </div>
-            <?php endif; ?>
+        <div class="link">
+            <a class="navLink" href="./Awards.php">2023 Awards</a>
         </div>
+        <div class="link">
+            <a class="navLink" href="./AboutUs.php">About Us</a>
+        </div>
+        <div class="link">
+            <a class="navLink" href="./ContactUs.php">Contact Us</a>
+        </div>
+        <?php if ($logged): ?>
+            <!-- Display user's name when logged in -->
+            <div style=" margin-left: 15px;" class="Name">
+                <?php echo $emri; ?>
+            </div>
+        <?php endif; ?>
+        <button class="dashboardBT"><a href="./dashboard.php">~</a></button>
+    </div>
+    
+    <div class="secondDiv">
+        <?php if (!$logged): ?>
+            <div class="Login">
+                <a class="LoginLink" href="Login.php">Log-in</a>
+            </div>
+            <div class="Signup">
+            <a class="SignupButton" href="Register.php">Sign-up</a>
+            </div>
+        <?php else: ?>
+            <div style="margin-right: 20px;" class="Signup">
+                <a class="SignupButton" href="Logout.php">Log-out</a>
+            </div>
+        <?php endif; ?>
+    </div>
     </div>
     <div class="PTopNav">
         <div class="unlink">
@@ -181,11 +183,11 @@
             <div class="row-2">
                 <div class="profile">
                     <div>
-                        <img class="profile-img" src="https://upload.wikimedia.org/wikipedia/commons/6/64/G%C3%ABrmia_Park%2C_Prishtin%C3%AB%2C_Kosova.jpg" alt="">
+                        <img class="profile-img" src="./Images/blue-tit.jpg" alt="">
                     </div>
                 </div>
                 <div class="profile">
-                    <h3 class="sub-title">Germia Park</h3>
+                    <h3 class="sub-title">Blue Tit</h3>
                     <p class="parag">These photos were chosen by our very best, and were captured by some of the worldwide most known photographers. In capturing landscapes people find peace and quite this is the pinicle of what that.</p>
                     <span class="more">
                         <span></span>
@@ -244,11 +246,11 @@
             <div class="row-2">
                 <div class="profile">
                     <div>
-                        <img class="profile-img" src="https://upload.wikimedia.org/wikipedia/commons/6/64/G%C3%ABrmia_Park%2C_Prishtin%C3%AB%2C_Kosova.jpg" alt="">
+                        <img class="profile-img" src="./Images/blue-flower.jpg" alt="">
                     </div>
                 </div>
                 <div class="profile">
-                    <h3 class="sub-title">Germia Park</h3>
+                    <h3 class="sub-title">Blue Dew</h3>
                     <p class="parag">These photos were chosen by our very best, and were captured by some of the worldwide most known photographers. In capturing landscapes people find peace and quite this is the pinicle of what that.</p>
                     <span class="more">
                         <span></span>
