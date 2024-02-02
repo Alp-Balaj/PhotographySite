@@ -1,10 +1,13 @@
+<?php include("user_info.php"); ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home-Aspire</title>
-    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="./Style.css">
 </head>
 <body>   
     <div class="BackgroundIMG">
@@ -23,14 +26,27 @@
                 <div class="link">
                     <a class="navLink" href="./ContactUs.php">Contact Us</a>
                 </div>
+                <?php if ($logged): ?>
+                    <!-- Display user's name when logged in -->
+                    <div style=" margin-left: 15px;" class="Name">
+                        <?php echo $emri; ?>
+                    </div>
+                <?php endif; ?>
             </div>
+            
             <div class="secondDiv">
-                <div class="Login">
-                    <a class="LoginLink" href="Login.php">Log-in</a>
-                </div>
-                <div class="Signup">
+                <?php if (!$logged): ?>
+                    <div class="Login">
+                        <a class="LoginLink" href="Login.php">Log-in</a>
+                    </div>
+                    <div class="Signup">
                     <a class="SignupButton" href="Register.php">Sign-up</a>
-                </div>
+                    </div>
+                <?php else: ?>
+                    <div style="margin-right: 20px;" class="Signup">
+                        <a class="SignupButton" href="Logout.php">Log-out</a>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
         <div class="PTopNav">

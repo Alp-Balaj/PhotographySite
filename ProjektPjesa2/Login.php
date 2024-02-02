@@ -2,32 +2,26 @@
     session_start();
     include("connections.php");
 
-    function sanitize($data) {
-        return htmlspecialchars(strip_tags($data));
-    }
-    function validateEmail($email) {
-        return filter_var($email, FILTER_VALIDATE_EMAIL);
-    }
     
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-        $email = sanitize($_POST['email']);
-        $password = sanitize($_POST['password']);
+        $email = $_POST['email'];
+        $password = $_POST['password'];
 
-        if (!validateEmail($email)) {
-            echo "Invalid email format";
+
+
+        $query = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
+        $result = $conn->query($query);
+
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            $_SESSION['Id'] = $row['User_id'];
+            header("Location: index.php");
+            exit();
         } else {
-
-            $query = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
-            $result = $conn->query($query);
-    
-            if ($result->num_rows > 0) {
-                header("Location: index.php");
-                $_SESSION['Id'] = $userId;
-            } else {
-                header("Location: Login.php");
-            }
+            header("Location: Login.php");
         }
+        
     }
     $conn->close();
 ?>
