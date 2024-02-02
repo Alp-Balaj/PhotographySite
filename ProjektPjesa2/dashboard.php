@@ -1,92 +1,160 @@
 <?php include("user_info.php"); ?>
+<?php include("contact.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Dashboard</title>
+    <title>Admin Dashboard</title>
     <link rel="stylesheet" href="Style.css">
 </head>
-    <body>
 
-        <div class="TopNav">
-            <div class="firstDiv">
-                <a class="navLink" href="index.php"><div class="Name">ASPIRE</div></a>
-                <div class="link">
-                    <a class="navLink" href="./Gallery.php">Gallery</a>
-                </div>
-                <div class="link">
-                    <a class="navLink" href="./Awards.php">2023 Awards</a>
-                </div>
-                <div class="link">
-                    <a class="navLink" href="./AboutUs.php">About Us</a>
-                </div>
-                <div class="link">
-                    <a class="navLink" href="./ContactUs.php">Contact Us</a>
-                </div>
-                <?php if ($logged): ?>
-                    <!-- Display user's name when logged in -->
-                    <div style=" margin-left: 15px;" class="Name">
-                        <?php echo $emri; ?>
-                    </div>
-                <?php endif; ?>
-                <button class="dashboardBT"><a href="./dashboard.php">~</a></button>
+<body>
+
+    <div class="TopNav">
+        <div class="firstDiv">
+            <a class="navLink" href="index.php">
+                <div class="Name">ASPIRE</div>
+            </a>
+            <div class="link">
+                <a class="navLink" href="./Gallery.php">Gallery</a>
             </div>
-                
-            <div class="secondDiv">
-                <?php if (!$logged): ?>
-                    <div class="Login">
-                        <a class="LoginLink" href="Login.php">Log-in</a>
-                    </div>
-                    <div class="Signup">
+            <div class="link">
+                <a class="navLink" href="./Awards.php">2023 Awards</a>
+            </div>
+            <div class="link">
+                <a class="navLink" href="./AboutUs.php">About Us</a>
+            </div>
+            <div class="link">
+                <a class="navLink" href="./ContactUs.php">Contact Us</a>
+            </div>
+            <?php if ($logged): ?>
+                <!-- Display user's name when logged in -->
+                <div style=" margin-left: 15px;" class="Name">
+                    <?php echo $emri; ?>
+                </div>
+                <?php if ($isAdmin): ?>
+                    <button class="dashboardBT"><a href="./dashboard.php">~</a></button>
+                <?php endif; ?>
+            <?php endif; ?>
+        </div>
+
+        <div class="secondDiv">
+            <?php if (!$logged): ?>
+                <div class="Login">
+                    <a class="LoginLink" href="Login.php">Log-in</a>
+                </div>
+                <div class="Signup">
                     <a class="SignupButton" href="Register.php">Sign-up</a>
-                    </div>
-                <?php else: ?>
-                    <div style="margin-right: 20px;" class="Signup">
-                        <a class="SignupButton" href="Logout.php">Log-out</a>
-                    </div>
-                <?php endif; ?>
+                </div>
+            <?php else: ?>
+                <div style="margin-right: 20px;" class="Signup">
+                    <a class="SignupButton" href="Logout.php">Log-out</a>
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
+    <div class="PTopNav">
+        <div class="unlink">
+            <div class="plink">
+                <a class="navLink" href="./Gallery.php">Gallery</a>
+            </div>
+            <div class="plink">
+                <a class="navLink" href="./Awards.php">2023 Awards</a>
+            </div>
+            <div class="plink">
+                <a class="navLink" href="./AboutUs.php">About Us</a>
+            </div>
+            <div class="plink">
+                <a class="navLink" href="./ContactUs.php">Contact Us</a>
             </div>
         </div>
-        <div class="PTopNav">
-            <div class="unlink">
-                <div class="plink">
-                    <a class="navLink" href="./Gallery.php">Gallery</a>
+    </div>
+
+
+    <div class="dash">
+        <div class="container">
+            <h1>Users</h1>
+            <div class="row">
+                <div>
+                    <table class="tableDiv" border="1">
+                        <tr>
+                            <th>User-ID</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Action</th>
+                        </tr>
+                        <?php foreach ($dashUsers as $currentUser): ?>
+                            <tr>
+                                <td>
+                                    <?= isset($currentUser['User_id']) ? $currentUser['User_id'] : 'Null' ?>
+                                </td>
+
+                                <td>
+                                    <?= isset($currentUser['Name']) ? $currentUser['Name'] : 'Null' ?>
+                                </td>
+
+                                <td>
+                                    <?= isset($currentUser['Email']) ? $currentUser['Email'] : 'Null' ?>
+                                </td>
+
+                                <td>
+                                    <!-- Edit form -->
+                                    <form method="post" action="admin.php">
+                                        <input type="hidden" name="userId"
+                                            value="<?= isset($currentUser['User_id']) ? $currentUser['User_id'] : '' ?>">
+                                        <button type="submit" name="action" value="edit">Edit</button>
+                                    </form>
+
+                                    <!-- Delete form -->
+                                    <form method="post" action="delete.php">
+                                        <input type="hidden" name="userId"
+                                            value="<?= isset($currentUser['User_id']) ? $currentUser['User_id'] : '' ?>">
+                                        <input type="hidden" name="username"
+                                            value="<?= isset($currentUser['Name']) ? $currentUser['Name'] : '' ?>">
+                                        <button type="submit" name="action" value="delete">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </table>
                 </div>
-                <div class="plink">
-                    <a class="navLink" href="./Awards.php">2023 Awards</a>
-                </div>
-                <div class="plink">
-                    <a class="navLink" href="./AboutUs.php">About Us</a>
-                </div>
-                <div class="plink">
-                    <a class="navLink" href="./ContactUs.php">Contact Us</a>
+            </div>
+            <h1>Contact Messages</h1>
+            <div class="row">
+                <div>
+                    <table  class="tableDiv" border="1">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Message</th>
+                        </tr>
+                        <?php foreach ($Messages as $message): ?>
+                            <tr>
+                                <td>
+                                    <?= $message['ID'] ?>
+                                </td>
+                                <td>
+                                    <?= $message['full_name'] ?>
+                                </td>
+                                <td>
+                                    <?= $message['email'] ?>
+                                </td>
+                                <td>
+                                    <?= $message['message'] ?>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </table>
                 </div>
             </div>
         </div>
+    </div>
 
-        <footer>
-        <div class="Footer-content">
-            <h3>Company</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat laboriosam consequuntur voluptates excepturi. Reprehenderit itaque ex vero nostrum optio, minus obcaecati quasi qui adipisci eaque suscipit animi odit laudantium? Veritatis?</p>
-        </div>
-        <div class="Footer-content">
-            <h3>Contacts</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci magnam ad maxime pariatur numquam itaque excepturi, dicta molestiae qui error! Vitae perspiciatis deserunt omnis quidem magnam temporibus officiis dolor est.</p>
-        </div>
-        <div class="Footer-content">
-            <h3>About us</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, corrupti cum. Sequi non, sunt temporibus qui itaque inventore debitis laborum nemo at dolore, magni ipsum. Voluptate quisquam expedita siteos?</p>
-        </div>
-        <div class="Footer-content">
-            <h3>Socials</h3>
-            <div class="logos-txt"><img src="./Images/facebook.webp" class="logos-footer" alt="1"><div class="txt-only"> <a class="links" href="">facebook</a></div></div>
-            <div class="logos-txt"><img src="./Images/instagram.png" class="logos-footer" alt="2"><div class="txt-only"> <a class="links" href="">instagram</a></div></div>   
-            <div class="logos-txt"><img src="./Images/twitter.png" class="logos-footer" alt="3">  <div class="txt-only"> <a class="links" href="">twitter</a></div></div> 
-            <div class="logos-txt"><img src="./Images/pinterest.png" class="logos-footer" alt="4"><div class="txt-only"> <a class="links" href="">pinterest</a></div></div>    
-        </div>
-    </footer>
 
-    </body>
+</body>
+
 </html>

@@ -2,6 +2,8 @@
 
 include("connections.php");
 
+$query = "SELECT * FROM contact_messages";
+$Messages = $conn->query($query);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
@@ -11,11 +13,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = $_POST['message'];
 
     
-    $query = "INSERT INTO contact_messages (full_name, email, subject, message) 
+    $insertQuery = "INSERT INTO contact_messages (full_name, email, subject, message) 
               VALUES ('$fullName', '$email', '$subject', '$message')";
 
     
-    if ($conn->query($query) === TRUE) {
+    if ($conn->query($insertQuery) === TRUE) {
         header("Location: ./ContactUs.php");
         exit();
     } else {
