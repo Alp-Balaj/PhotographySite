@@ -331,8 +331,8 @@
     border-radius: 15px;
     color: #ffffff;
     padding-top: 15px;
-    height: 30vh;
-    width: 95%;
+    height: 40vh;
+    width: 90%;
   }
   .wrapper-cards h2 {
     font-size: 32px;
@@ -625,70 +625,98 @@
     margin: 0px;
     padding-top: 100px;
   }
-  .dash h1{
+  .dash{
+    background-image: url("./Images/Background.jpg");
+    height: 100vh;
+  }
+  .DScontainer{
+    max-width: 50%;
+    height: 99vh;
+    margin: 0 auto;
+    background-color: #293055;
+    z-index: 1;
+    border-radius: 50px;
+    border: solid 5px #060c2d90;
+  }
+  .dash h1 {
     margin: 0px;
-    padding-top: 100px;
+    padding-top: 200px;
     text-align: center;
     color: #f9ac67;
   }
-  .tableDiv th{
+  .tableSpace{
+    max-height: 150px;
+    display: flex;
+    overflow-x: auto;
+  }
+  .tableSpace::-webkit-scrollbar {
+    width: 5px;
+  }
+  .tableSpace::-webkit-scrollbar-thumb {
+    background-color: #f9ac67;
+    border-radius: 15px;
+  }
+  .tableDiv th {
     color: #9dbc98;
   }
-  .tableDiv button{
+  .tableDiv td {
+    color: #fff;
+  }
+  .tableDiv button {
     cursor: pointer;
     background-color: #9dbc98;
-    border:none;
+    border: none;
     border-radius: 5%;
     width: 100%;
   }
-  .tableDiv button:hover{
+  .tableDiv button:hover {
     background-color: #638889;
     transition: background-color 0.3s ease-in-out;
   }
-  .editUser{
+  .editUser {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 25px;
   }
-  .editUser form{
+  .editUser form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 50%;
   }
-  .editUser button{
+  .editUser button {
     padding: 3px 5px;
     margin-top: 10px;
     cursor: pointer;
     background-color: #9dbc98;
-    border:none;
+    border: none;
     border-radius: 50px;
     width: fit-content;
   }
-  .editUser button:hover{
+  .editUser button:hover {
     background-color: #638889;
     transition: background-color 0.3s ease-in-out;
   }
-  .lastone{
+  .lastone {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .lastone button{
+  .lastone button {
     padding: 5px 5px;
     margin-top: 10px;
     cursor: pointer;
     background-color: #9dbc98;
-    border:none;
+    border: none;
     border-radius: 50px;
     width: 50px;
   }
-  .lastone button:hover{
+  .lastone button:hover {
     background-color: #638889;
     transition: background-color 0.3s ease-in-out;
   }
@@ -1304,70 +1332,105 @@
     margin: 0px;
     padding-top: 100px;
   }
-  .dash h1{
+  .dash h1 {
     margin: 0px;
     padding-top: 100px;
     text-align: center;
     color: #f9ac67;
   }
-  .tableDiv th{
+  .dash{
+    background-image: url("./Images/Background.jpg");
+    height: 100vh;
+  }
+  .DScontainer{
+    max-width: 90%;
+    height: 99vh;
+    margin: 0 auto;
+    background-color: #293055;
+    z-index: 1;
+    border-radius: 50px;
+    border: solid 5px #060c2d90;
+  }
+  .dash h1 {
+    margin: 0px;
+    padding-top: 200px;
+    text-align: center;
+    color: #f9ac67;
+  }
+  .tableSpace{
+    max-height: 150px;
+    display: flex;
+    overflow-x: auto;
+  }
+  .tableSpace::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  .tableSpace::-webkit-scrollbar-thumb {
+    background-color: #f9ac67;
+    border-radius: 15px;
+  }
+  .tableDiv th {
     color: #9dbc98;
   }
-  .tableDiv button{
+  .tableDiv td {
+    color: #fff;
+  }
+  .tableDiv button {
     cursor: pointer;
     background-color: #9dbc98;
-    border:none;
+    border: none;
     border-radius: 5%;
     width: 100%;
   }
-  .tableDiv button:hover{
+  .tableDiv button:hover {
     background-color: #638889;
     transition: background-color 0.3s ease-in-out;
   }
-  .editUser{
+  .editUser {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 25px;
   }
-  .editUser form{
+  .editUser form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 50%;
   }
-  .editUser button{
+  .editUser button {
     padding: 3px 5px;
     margin-top: 10px;
     cursor: pointer;
     background-color: #9dbc98;
-    border:none;
+    border: none;
     border-radius: 50px;
     width: fit-content;
   }
-  .editUser button:hover{
+  .editUser button:hover {
     background-color: #638889;
     transition: background-color 0.3s ease-in-out;
   }
-  .lastone{
+  .lastone {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .lastone button{
+  .lastone button {
     padding: 5px 5px;
     margin-top: 10px;
     cursor: pointer;
     background-color: #9dbc98;
-    border:none;
+    border: none;
     border-radius: 50px;
     width: 50px;
   }
-  .lastone button:hover{
+  .lastone button:hover {
     background-color: #638889;
     transition: background-color 0.3s ease-in-out;
   }

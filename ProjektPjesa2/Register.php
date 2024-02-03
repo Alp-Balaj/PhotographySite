@@ -10,14 +10,34 @@ if (isset($_POST['registerBtn'])) {
     $password2 = $_POST['password_2'];
 
     $userId = mt_rand(1, 999);
+    
+    $query = "SELECT * FROM users";
+    $result = $conn->query($query);
 
-    $sql = "INSERT INTO users (User_id, Name, Email, Password) VALUES ('$userId', '$username', '$email', '$password')";
+    
+    if(strlen($username)<4){
+        header("Location: errorName.php");
+        exit();
+    }
+    if (!preg_match('/\S+@\S+\.\S+/', $email)){
+        header("Location: errorEmail.php");
+        exit();
+    }
+    if(strlen($password)< 8){
+        header("Location: errorPass.php");
+        exit();
+    }
 
-
+    if ($result->num_rows == 0) {
+        $sql = "INSERT INTO users (User_id, Name, Email, Password, Admin) VALUES ('$userId', '$username', '$email', '$password', '1')";
+    }
+    else {
+        $sql = "INSERT INTO users (User_id, Name, Email, Password) VALUES ('$userId', '$username', '$email', '$password')";
+    }
 
     if ($conn->query($sql) === TRUE) {
+        $_SESSION['Id'] = $userId;
         header("Location: index.php");
-
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }

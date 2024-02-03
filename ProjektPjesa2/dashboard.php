@@ -75,10 +75,10 @@
 
 
     <div class="dash">
-        <div class="container">
+        <div class="DScontainer">
             <h1>Users</h1>
             <div class="row">
-                <div>
+                <div class="tableSpace">
                     <table class="tableDiv" border="1">
                         <tr>
                             <th>User-ID</th>
@@ -122,9 +122,9 @@
                     </table>
                 </div>
             </div>
-            <h1>Contact Messages</h1>
+            <h1 style="padding-top: 100px;">Contact Messages</h1>
             <div class="row">
-                <div>
+                <div class="tableSpace">
                     <table  class="tableDiv" border="1">
                         <tr>
                             <th>ID</th>
@@ -145,6 +145,13 @@
                                 </td>
                                 <td>
                                     <?= $message['message'] ?>
+                                </td>
+                                <td>
+                                <form method="post" action="deleteCont.php">
+                                        <input type="hidden" name="ID"
+                                            value="<?= isset($message['ID']) ? $message['ID'] : '' ?>">
+                                        <button type="submit" name="action" value="delete">Delete</button>
+                                    </form>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
