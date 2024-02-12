@@ -2,9 +2,25 @@
 session_start();
 include("connections.php");
 
-if (isset($_POST['registerBtn'])) {
+function doesUsernameExists($conn, $username) {
+    $username = mysqli_real_escape_string($conn, $username);
+    $query = "SELECT * FROM users WHERE Name = '$username'";
+    $result = $conn->query($query);
 
-    $username = $_POST['username'];
+    return ($result->num_rows > 0);
+}
+
+function doesEmailExists($conn, $email) {
+    $email = mysqli_real_escape_string($conn, $email);
+    $query = "SELECT * FROM users WHERE Email = '$email'";
+    $result = $conn->query($query);
+
+    return ($result->num_rows > 0);
+}
+
+if (isset($_POST['registerBtn'])) {
+    
+    $username = $_POST['username']; 
     $email = $_POST['email'];
     $password = $_POST['password_1'];
     $password2 = $_POST['password_2'];
@@ -19,10 +35,14 @@ if (isset($_POST['registerBtn'])) {
         header("Location: errorName.php");
         exit();
     }
-    if (!preg_match('/\S+@\S+\.\S+/', $email)){
-        header("Location: errorEmail.php");
+    elseif(doesUsernameExists($conn,$username)){
+        header("Location: errorName2.php");
         exit();
     }
+    if (!preg_match('/\S+@\S+\.\S+/', $email) || doesEmailExists($conn, $email)) {
+        header("Location: errorEmail.php");
+        exit();
+    }    
     if(strlen($password)< 8){
         header("Location: errorPass.php");
         exit();
@@ -43,7 +63,7 @@ if (isset($_POST['registerBtn'])) {
     }
 }
 
-$conn->close();
+
 
 ?>
 
@@ -60,7 +80,7 @@ $conn->close();
 <body>
     <div class="login-box">
         <a href="index.php" class="name">ASPIRE</a>
-        <form method="post" name="form">
+        <form method="post" id="registrationForm">
 
 
             <div class="user-box"><input type="text" placeholder="Name" id="emri" name="username"></div>
